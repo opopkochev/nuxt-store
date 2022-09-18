@@ -7,8 +7,8 @@
         {{ user }}
       </pre>
       <div class="form-group">
-        <label class="form-label"> Email </label>
-        <input v-model="user.email" type="text">
+        <label class="form-label"> Username </label>
+        <input v-model="user.username" type="text">
       </div>
       <div class="form-group">
         <label class="form-label"> Password </label>
@@ -27,8 +27,8 @@ export default {
   name: 'LoginPage',
   data: () => ({
     user: {
-      email: 'orcean@gmail.com',
-      password: '123123123'
+      username: 'kminchelle',
+      password: '0lelplR'
     }
   }),
   methods: {

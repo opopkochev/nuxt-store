@@ -27,8 +27,8 @@ export const actions = {
   },
 
   async FETCH_PLAYER ({ state, commit }) {
-    const response = await this.$axios.$get('https://app-fox.atbl.me/api/player')
-    commit('SET_PLAYER', response.user)
+    const response = await this.$axios.$get('https://dummyjson.com/users/1')
+    commit('SET_PLAYER', response)
     this.$router.push('/')
 
     // SERVER SIDE
@@ -40,7 +40,7 @@ export const actions = {
   },
 
   async SIGNIN ({ dispatch }, data) {
-    const { token } = await this.$axios.$post('https://app-fox.atbl.me/api/login', data)
+    const { token } = await this.$axios.$post('https://dummyjson.com/auth/login', data)
     this.$cookies.set('token', token, {
       path: '/',
       maxAge: 60 * 60 * 24 * 7
